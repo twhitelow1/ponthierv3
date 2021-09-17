@@ -8,7 +8,7 @@ class CreateQuotes < ActiveRecord::Migration[6.1]
       t.string :phone
       t.string :project_type
       t.string :floors
-      t.int :building_sqft
+      t.integer :building_sqft
       t.boolean :garage
       t.string :roof_material
       t.string :pitch_of_roof
@@ -16,7 +16,7 @@ class CreateQuotes < ActiveRecord::Migration[6.1]
       t.string :ext_material
       t.boolean :screen_removal
       t.string :door_material
-      t.int :flt_surface_sqft
+      t.integer :flt_surface_sqft
       t.string :driveway_size
       t.string :comments
       t.boolean :roof_services
