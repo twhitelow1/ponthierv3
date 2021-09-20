@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     delete "services/:id" => "offered_services#destroy"
     patch "/services/:id" => "offered_services#update"
 
-    
+    post "/users" => "users#create"
+
   end
 end
