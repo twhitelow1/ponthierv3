@@ -10,10 +10,13 @@ class Api::OfferedServicesController < ApplicationController
   end
 
   def create
+    response = Cloudinary::Uploader.upload(params[:image])
+    cloudinary_url = response["secure_url"]
+
     @offered_service = OfferedService.new(
       name: params[:name], 
       description: params[:description], 
-      img_url: params[:imgUrl], 
+      img_url: cloudinary_url, 
     )
     @offered_service.save
     render "show.json.jb"
