@@ -36,26 +36,26 @@ Quote.create(
 OfferedService.create(
   name: "Building (House) Wash", 
   description: " ", 
-  img_url: "https://via.placeholder.com/350x150"
+  image: "https://via.placeholder.com/350x150"
 ) 
 OfferedService.create(
   name: "Gutter Cleaning", 
   description: " ", 
-  img_url: "https://via.placeholder.com/350x150"
+  image: "https://via.placeholder.com/350x150"
 ) 
 OfferedService.create(
   name: "Flat Surface/Driveway Wash", 
   description: " ", 
-  img_url: "https://via.placeholder.com/350x150"
+  image: "https://via.placeholder.com/350x150"
 ) 
 OfferedService.create(
   name: "Rust Removal", 
   description: " ", 
-  img_url: "https://via.placeholder.com/350x150"
+  image: "https://via.placeholder.com/350x150"
 ) 
 OfferedService.create(
   name: "Roof Services", 
   description: " ", 
-  img_url: "https://via.placeholder.com/350x150"
+  image: "https://via.placeholder.com/350x150"
 ) 
 
