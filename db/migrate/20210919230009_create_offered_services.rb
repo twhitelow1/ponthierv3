@@ -3,7 +3,7 @@ class CreateOfferedServices < ActiveRecord::Migration[6.1]
     create_table :offered_services do |t|
       t.string :name
       t.string :description
-      t.string :img_url
+      t.string :image
 
       t.timestamps
     end
