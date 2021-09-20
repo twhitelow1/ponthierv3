@@ -16,7 +16,7 @@ class Api::OfferedServicesController < ApplicationController
     @offered_service = OfferedService.new(
       name: params[:name], 
       description: params[:description], 
-      img_url: cloudinary_url, 
+      image: cloudinary_url, 
     )
     @offered_service.save
     render "show.json.jb"
@@ -26,7 +26,7 @@ class Api::OfferedServicesController < ApplicationController
     @offered_service = OfferedService.find_by(id: params[:id])
       @offered_service.name = params[:name] || @offered_service.name
       @offered_service.description = params[:description] || @offered_service.description
-      @offered_service.img_url = params[:imgUrl] || @offered_service.img_url
+      @offered_service.img_url = params[:image] || @offered_service.img_url
       
     @offered_service.save
     render "show.json.jb"
