@@ -10,12 +10,7 @@ class Api::OfferedServicesController < ApplicationController
   end
 
   def create
-    response = Cloudinary::Uploader.upload(params[:image],
-    {
-      cloud_name: Rails.application.credentials.cloudinary.cloud_name,
-      api_key: Rails.application.credentials.cloudinary[:api_key],
-      api_secret: Rails.application.credentials.cloudinary[:api_secret],
-    })
+    response = Cloudinary::Uploader.upload(params[:image])
     cloudinary_url = response["secure_url"]
 
     @offered_service = OfferedService.new(
@@ -28,12 +23,7 @@ class Api::OfferedServicesController < ApplicationController
   end
 
   def update
-    response = Cloudinary::Uploader.upload(params[:image],
-      {
-        cloud_name: Rails.application.credentials.cloudinary[:cloud_name],
-        api_key: Rails.application.credentials.cloudinary[:api_key],
-        api_secret: Rails.application.credentials.cloudinary[:api_secret],
-      })
+    response = Cloudinary::Uploader.upload(params[:image])
       cloudinary_url = response["secure_url"]
 
     @offered_service = OfferedService.find_by(id: params[:id])
