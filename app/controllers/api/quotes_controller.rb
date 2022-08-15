@@ -70,4 +70,10 @@ class Api::QuotesController < ApplicationController
     @quote.save
     render "show.json.jb"
   end
+
+  def destroy
+    @quote = Quote.find_by(id: params[:id])
+    @quote.destroy
+    render json: {message: "User successfully destroyed."}
+  end
 end
