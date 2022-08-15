@@ -9,10 +9,11 @@ Rails.application.routes.draw do
     get "/services" => "offered_services#index"
     post "/services" => "offered_services#create"
     get "/services/:id" => "offered_services#show"
-    delete "services/:id" => "offered_services#destroy"
+    delete "/services/:id" => "offered_services#destroy"
     patch "/services/:id" => "offered_services#update"
 
     post "/users" => "users#create"
+    delete "/users/:id" => "users#destroy"
 
     post "/sessions" => "sessions#create"
 
