@@ -23,5 +23,7 @@ Things you may want to cover:
  - When adding cloudinary to production the confiuration vial cloudinary.rb in initializers it did not work so I had to change to using cloudinary.yml
 
 * Deployment instructions
-
+Deploy to Heroku Account. 
+Todd@Whitelow.tech is the Account.
+Git push heroku main is the command to push to server.
 * ...

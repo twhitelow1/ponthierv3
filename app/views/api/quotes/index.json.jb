@@ -3,7 +3,7 @@
     id: quote.id,
     price: quote.price,
     status: quote.status,
-    date: quote.created_at.httpdate,
+    created_at : quote.created_at,
     customer_info: {
       client_name: quote.client_name, 
       email: quote.email, 
