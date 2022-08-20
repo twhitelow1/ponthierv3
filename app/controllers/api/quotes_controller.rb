@@ -31,8 +31,11 @@ class Api::QuotesController < ApplicationController
       rust_removal: params[:rustRemoval],
       comments: params[:comments],
     )
-    @quote.save
-    render "show.json.jb"
+    if @quote.save
+      render "show.json.jb"
+    else 
+      render json: { errors: @quote.errors.full_messages }, status: 400
+    end
   end
 
   def show
@@ -66,13 +69,16 @@ class Api::QuotesController < ApplicationController
     # @quote.rust_removal = params[:rustRemoval] || @quote.rust_removal
     # @quote.comments = params[:comments] || @quote.comments
     
-    @quote.save
-    render "show.json.jb"
+    if @quote.save
+      render "show.json.jb"
+    else 
+      render json: { errors: @quote.errors.full_messages }, status: 400
+    end
   end
 
   def destroy
     @quote = Quote.find_by(id: params[:id])
     @quote.destroy
-    render json: {message: "User successfully destroyed."}
+    render json: {message: "Quote has been successfully destroyed."}
   end
 end
