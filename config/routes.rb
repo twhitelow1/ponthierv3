@@ -6,6 +6,11 @@ Rails.application.routes.draw do
     patch "/quotes/:id" => "quotes#update"
     delete "/quotes/:id" => "quotes#destroy"
 
+    get "/sections" => "sections#index"
+    post "/sections" => "sections#create"
+    get "/sections/:id" => "sections#show"
+    patch "/sections/:id" => "sections#update"
+
     get "/services" => "offered_services#index"
     post "/services" => "offered_services#create"
     get "/services/:id" => "offered_services#show"

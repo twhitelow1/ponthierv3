@@ -58,4 +58,4 @@ OfferedService.create(
   description: " ", 
   image: "https://via.placeholder.com/350x150"
 ) 
-
+ 

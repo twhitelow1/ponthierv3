@@ -1,0 +1,6 @@
+{
+  id: @section.id,
+  body: @section.body,
+  header: @section.header,
+  photo: @section.photo,
+}
