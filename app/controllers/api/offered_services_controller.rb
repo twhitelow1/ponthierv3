@@ -10,6 +10,7 @@ class Api::OfferedServicesController < ApplicationController
   end
 
   def create
+    begin
     response = Cloudinary::Uploader.upload(params[:image])
     cloudinary_url = response["secure_url"]
 
@@ -20,6 +21,10 @@ class Api::OfferedServicesController < ApplicationController
     )
     @offered_service.save
     render "show.json.jb"
+    rescue => e
+      puts "Error: #{e.message}"
+      render json: {error e.message}, status:unprocessable_entity
+    end
   end
 
   def update
